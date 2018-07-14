@@ -1,0 +1,93 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "project": {
+    "name": "my-app"
+  },
+  "apps": [
+    {
+      "root": "src",
+      "outDir": "dist",
+      "assets": [
+        "assets",
+        "favicon.ico"
+      ],
+      "index": "index.html",
+      "main": "main.ts",
+      "polyfills": "polyfills.ts",
+      "test": "test.ts",
+      "tsconfig": "tsconfig.app.json",
+      "testTsconfig": "tsconfig.spec.json",
+      "prefix": "app",
+      "styles": [
+        "styles.scss",
+        "../node_modules/bootstrap/dist/css/bootstrap.css"
+      ],
+      "scripts": [
+        "./assets/js/jquery.min.js",
+        "../node_modules/moment/moment.js",
+        "./assets/js/plugins/nicescroll/jquery.nicescroll.min.js",
+        "./assets/js/plugins/jquery-ui/jquery-ui.js",
+        "./assets/js/plugins/touch-punch/jquery.touch-punch.min.js",
+        "./assets/js/plugins/slimscroll/jquery.slimscroll.min.js",
+        "./assets/js/plugins/vmap/jquery.vmap.min.js",
+        "./assets/js/plugins/vmap/jquery.vmap.world.js",
+        "./assets/js/plugins/vmap/jquery.vmap.sampledata.js",
+        "./assets/js/plugins/bootbox/jquery.bootbox.js",
+        "./assets/js/plugins/flot/jquery.flot.min.js",
+        "./assets/js/plugins/flot/jquery.flot.bar.order.min.js",
+        "./assets/js/plugins/flot/jquery.flot.pie.min.js",
+        "./assets/js/plugins/flot/jquery.flot.resize.min.js",
+        "./assets/js/plugins/imagesLoaded/jquery.imagesloaded.min.js",
+        "./assets/js/plugins/pageguide/jquery.pageguide.js",
+        "./assets/js/plugins/chosen/chosen.jquery.min.js",
+        "./assets/js/plugins/select2/select2.min.js",
+        "./assets/js/plugins/icheck/jquery.icheck.min.js",
+        "./assets/js/eakroko.js",
+        "./assets/js/application.js",
+        "./assets/js/bootstrap-datetimepicker.js",
+        "../node_modules/noty/lib/noty.js",
+        "./assets/js/jquery.caret.js",
+        "./assets/js/jquery.atwho.js",
+        "./assets/js/dropzone.js"
+
+      ],
+      "environmentSource": "environments/environment.ts",
+      "environments": {
+        "dev": "environments/environment.ts",
+        "prod": "environments/environment.prod.ts"
+      }
+    }
+  ],
+  "e2e": {
+    "protractor": {
+      "config": "./protractor.conf.js"
+    }
+  },
+  "lint": [
+    {
+      "project": "src/tsconfig.app.json",
+      "exclude": "**/node_modules/**"
+    },
+    {
+      "project": "src/tsconfig.spec.json",
+      "exclude": "**/node_modules/**"
+    },
+    {
+      "project": "e2e/tsconfig.e2e.json",
+      "exclude": "**/node_modules/**"
+    }
+  ],
+  "test": {
+    "karma": {
+      "config": "./karma.conf.js"
+    }
+  },
+  "defaults": {
+    "styleExt": "scss",
+    "component": {
+    },
+    "serve": {
+      "port": 4201
+    }
+  }
+}

@@ -1,0 +1,32 @@
+<nav class="breadcrumb">
+    <a class="breadcrumb-item" href="#/dashboard">Home</a>
+    <i class="fa fa-angle-right"></i>
+    <a class="breadcrumb-item" href="#/user/list">User</a>
+    <i class="fa fa-angle-right"></i>
+    <span class="breadcrumb-item active">Profile</span>
+</nav>
+
+<div class="box">
+    <div class="box-title">
+        <h3>
+            <i class="fa fa-pencil-square-o"></i>
+            Profile
+        </h3>
+    </div>
+</div>
+
+
+<div class="container center-container"><br>
+    <form #userForm="ngForm" novalidate (ngSubmit)="updateUser(userForm)">
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" class="form-control" name="username" id="username" placeholder="Enter the username"
+                   [(ngModel)]="userdata.username"
+                   #username="ngModel" required>
+            <div [hidden]="username.valid || username.pristine" class="alert alert-danger">
+                username is required
+            </div>
+        </div>
+        <button class="btn btn-primary" [disabled]="!userForm.form.valid">Update</button>
+    </form>
+</div>

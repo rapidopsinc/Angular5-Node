@@ -1,0 +1,42 @@
+//$ag-icons-path: "../node_modules/ag-grid/src/styles/icons/";
+//$odd-row-background-color:#CFD8DC;
+//@import "~ag-grid/src/styles/ag-grid.scss";
+//@import "~ag-grid/src/styles/ag-theme-balham.scss";
+//@import "./assets/sass/style";
+
+
+
+
+
+@import "../node_modules/bootstrap/dist/css/bootstrap.css";
+@import "../node_modules/ag-grid/dist/styles/ag-grid.css";
+@import "../node_modules/ag-grid/dist/styles/theme-fresh.css";
+@import "../node_modules/font-awesome/css/font-awesome.css";
+@import "../node_modules/noty/lib/noty.css";
+//@import "../node_modules/simple-line-icons/css/simple-line-icons.css";
+//@import '~angular-tree-component/dist/angular-tree-component.css';
+@import "../node_modules/ng2-slim-loading-bar/style.css";
+//@import "../node_modules/froala-editor/css/froala_editor.pkgd.min.css";
+
+//Theme css
+@import "assets/sass/style.scss";
+
+//Page css
+//@import "modules/auth/login/login.scss";
+//@import "modules/auth/forgot-password/forgot-password.scss";
+//@import "modules/category-content/print-content/print-content";
+//@import "modules/category-content/category-content";
+//@import "modules/@shared/components/under-construction/under-construction.scss";
+//@import "modules/patient-reported-outcomes/pro-admin.scss";
+//@import "modules/clinic/popup.scss";
+//@import "modules/notification/notification.scss";
+
+
+#ascrail2000,#ascrail2001,#ascrail2002,#ascrail2003,#ascrail2004,
+#ascrail2005,#ascrail2006,#ascrail2007,#ascrail2008,#ascrail2009
+{ display: none !important;}
+#content.container-fluid.nav-fixed { height:100% !important;}
+
+.help-block.has-error{ color: #f44336; font-size: 12px; margin-left: 0;}
+
+.help-block.has-error.invalid-all{ margin-left: -15px;}
