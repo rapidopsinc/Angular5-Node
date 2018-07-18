@@ -29,7 +29,7 @@
   padding: 0;
   width: 18px;
   height: 18px;
-  background: url("assets/img/minimal.png") no-repeat;
+  background: url("/src/assets/img/minimal.png") no-repeat;
   border: none;
   cursor: pointer; }
 
@@ -69,7 +69,7 @@
 @media (-o-min-device-pixel-ratio: 5 / 4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
   .icheckbox_minimal,
   .iradio_minimal {
-    background-image: url("assets/img/minimal@2x.png");
+    background-image: url("/src/assets/img/minimal@2x.png");
     -webkit-background-size: 200px 20px;
     background-size: 200px 20px; } }
 /* iCheck plugin Square skin, blue
@@ -83,7 +83,7 @@
   padding: 0;
   width: 22px;
   height: 22px;
-  background: url("assets/img/blue.png") no-repeat;
+  background: url("/src/assets/img/blue.png") no-repeat;
   border: none;
   cursor: pointer; }
 
@@ -123,7 +123,7 @@
 @media (-o-min-device-pixel-ratio: 5 / 4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
   .icheckbox_square-blue,
   .iradio_square-blue {
-    background-image: url("assets/img/blue@2x.png");
+    background-image: url("/src/assets/img/blue@2x.png");
     -webkit-background-size: 240px 24px;
     background-size: 240px 24px; } }
 .horizontal-check-line {
@@ -153,7 +153,7 @@
   padding: 0;
   width: 18px;
   height: 18px;
-  background: url("assets/img/minimal.png") no-repeat;
+  background: url("/src/assets/img/minimal.png") no-repeat;
   border: none;
   cursor: pointer;
   -webkit-appearance: none;

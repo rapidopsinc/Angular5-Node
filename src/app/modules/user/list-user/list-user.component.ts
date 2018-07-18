@@ -13,6 +13,7 @@ import {CommonService} from '../../../@shared/services/common.service';
 })
 export class UserListComponent {
 
+  data:any;
   constructor(private userService: UserService,
               private router: Router,
               private route: ActivatedRoute,
@@ -21,6 +22,14 @@ export class UserListComponent {
 
   ngOnInit() {
     console.log('this.route.snapshot.data[users]', this.route.snapshot.data['users']);
+    this.userService.getusers()
+      .subscribe((result) => {
+        // console.log('result', result);
+        this.data = result;
+      },(error)=>{
+        console.log('error', error);
+        console.log('error', error.message);
+      });
   }
 
 

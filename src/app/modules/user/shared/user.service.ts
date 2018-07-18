@@ -6,11 +6,13 @@ import 'rxjs/add/operator/take';
 import {User} from './user';
 import {ActivatedRouteSnapshot, Resolve} from "@angular/router";
 import {DataService} from '../../../@shared/services/data.service';
+import {SlimLoadingBarService} from "ng2-slim-loading-bar";
 
 @Injectable()
 export class UserService  {
     constructor(private http: HttpClient,
-                private dataService: DataService) {
+                private dataService: DataService,
+                private slimLoadingBarService: SlimLoadingBarService) {
     }
 
 
@@ -22,16 +24,19 @@ export class UserService  {
         })
     }
 
-    getUsersForForgotPassowrd(body: User) {
-        return this.dataService.callAPI({
-            url: '/listusersforforgotpassword'
-        })
-    }
+getusers(){
+  return this.http.get(`https://jsonplaceholder.typicode.com/posts` );
+
+}
 
     listUser() {
         return this.dataService.callAPI({
             url: '/root'
         })
+
+        // .subscribe(result => {
+          // this.dataObj = result.json();  return this.http.get(this.configUrl);
+        // });
     }
 
 
