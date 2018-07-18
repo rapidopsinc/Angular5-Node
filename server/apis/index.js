@@ -4,7 +4,7 @@
 let byPassedEndpoints = [
 	'/check-login',
 	'/inventory',
-	'/updateSkuInventory',
+	'/upload-file',
 	'/user'
 ];
 let fs                = require('fs');

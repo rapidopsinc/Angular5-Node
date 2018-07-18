@@ -46,6 +46,12 @@ let routes: Routes = [
     children: [...UserModule.ROUTES],
     canActivate: [LoggedInGuard]
   },
+  {
+    path: 'file-upload',
+    component: RootComponent,
+    children: [...inventoryModule.ROUTES],
+    canActivate: [LoggedInGuard]
+  }
 ];
 
 @NgModule({

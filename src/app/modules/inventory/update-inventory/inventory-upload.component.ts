@@ -1,7 +1,7 @@
 import {Component, OnInit, OnDestroy, NgZone} from '@angular/core';
 import {Router, ActivatedRoute, Params} from '@angular/router';
 import * as moment from 'moment';
-import {Http} from '@angular/http';
+import {HttpClient} from "@angular/common/http";
 import {InventoryService} from '../inventory.service';
 import {LoadingBarService} from '../../../@shared/services/loadingbar.service';
 import {NotificationService} from '../../../@shared/services/notification.service';
@@ -13,8 +13,8 @@ let $ = require('jquery');
 let _self = null;
 
 @Component({
-  selector: 'inventory-upload',
-  templateUrl: './inventory-upload.component.html',
+  selector: 'file-upload',
+  templateUrl: './file-upload.component.html',
   providers: []//,
   //changeDetection: ChangeDetectionStrategy.Default
 })
@@ -23,7 +23,7 @@ export class InventoryUploadComponent {
 
   constructor(private route: ActivatedRoute,
               private router: Router,
-              private  http: Http,
+              private  http: HttpClient,
               private loadingBarService: LoadingBarService,
               private notificationService: NotificationService,
               private inventoryService: InventoryService) {

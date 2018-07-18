@@ -21,7 +21,7 @@ export class InventoryService {
     updateInventory(data) {
         console.log('data', data);
         return this.dataService.callAPI({
-            url: '/api/updateSkuInventory',
+            url: '/api/upload-file',
             method: 'post',
             body: data,
             successMessage: 'Success.',
