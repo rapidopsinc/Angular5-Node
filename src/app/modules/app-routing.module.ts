@@ -1,6 +1,6 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
-import {HttpModule} from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 import {AuthModule} from './auth/auth.module';
 import {DashboardModule} from './dashboard/dashboard.module';
 import {RootComponent} from '../components/layout/root.component';
@@ -56,7 +56,7 @@ let routes: Routes = [
 
 @NgModule({
   declarations: [RootComponent, HeaderComponent, SidebarComponent, HomeComponent],
-  imports: [CommonModule, HttpModule, RouterModule.forRoot(routes), AuthModule, DashboardModule, inventoryModule],
+  imports: [CommonModule, HttpClientModule, RouterModule.forRoot(routes), AuthModule, DashboardModule, inventoryModule],
   exports: [RouterModule],
   providers: [PagerService]
 })

@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
 
     // this.titleService.setTitle("ESCAPE59");
     authService.isLoggedIn().subscribe(r => {
-      if (r.json().status == 'success')
+      if (r.status == 'success')
         route.navigate(['dashboard']);
     });
 

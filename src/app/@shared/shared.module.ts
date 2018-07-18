@@ -5,7 +5,6 @@ import { DataService } from './services/data.service';
 // import { StateResolve } from "./services/state.resolve";
 import {NotificationService} from './services/notification.service';
 import {LoadingBarService} from './services/loadingbar.service';
-import {CommonDataService} from './services/commondata.service';
 import {DataResolve} from './services/data.resolve';
 
 /**
@@ -20,7 +19,6 @@ export class SharedModule {
     // StateResolve,
     NotificationService,
     LoadingBarService,
-    CommonDataService,
   ];
 
 }
