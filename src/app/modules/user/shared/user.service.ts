@@ -6,7 +6,6 @@ import 'rxjs/add/operator/take';
 import {User} from './user';
 import {ActivatedRouteSnapshot, Resolve} from "@angular/router";
 import {DataService} from '../../../@shared/services/data.service';
-// import {RoHttp} from "../../../_services/ro-http.service";
 
 @Injectable()
 export class UserService  {
@@ -19,9 +18,7 @@ export class UserService  {
         return this.dataService.callAPI({
             url: '/root',
             body: body,
-            method: 'post',
-            // successMessage: this.messageManager.getMessage('user.addSuccess'),
-            //errorMessage: this.messageManager.getMessage('user.addError')
+            method: 'post'
         })
     }
 

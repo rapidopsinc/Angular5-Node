@@ -2,7 +2,7 @@
  Endpoints which don't require authentication
  */
 let byPassedEndpoints = [
-	'/checkLogin',
+	'/check-login',
 	'/login',
 	'/logout',
 	'/root',
@@ -25,7 +25,7 @@ module.exports        = class Modules {
 		});
 		this.setupRoutes(app);
 	}
-	
+
 	setupRoutes(app){
 		fs.readdirSync(__dirname + '/').filter(function(file){
 			var stats = fs.statSync(__dirname + '/' + file);

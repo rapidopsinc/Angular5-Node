@@ -2,7 +2,7 @@
  Endpoints which don't require authentication
  */
 let byPassedEndpoints = [
-	'/checkLogin',
+	'/check-login',
 	'/inventory',
 	'/updateSkuInventory',
 	'/user'

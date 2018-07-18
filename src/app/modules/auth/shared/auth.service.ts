@@ -1,5 +1,6 @@
 import {Injectable} from "@angular/core";
-import {Http, Headers, Response} from "@angular/http";
+import {HttpClient, HttpHeaders} from "@angular/common/http";
+import { Response} from "@angular/http";
 import {Observable} from "rxjs/Observable";
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
@@ -10,15 +11,14 @@ import {DataService} from '../../../@shared/services/data.service';
 @Injectable()
 export class AuthService {
 
-    constructor(private http: Http,
+    constructor(private http: HttpClient,
                 private dataService: DataService) {
-
     }
 
-    private headers = new Headers({'Content-Type': 'application/json'});
+    private headers = new HttpHeaders({'Content-Type': 'application/json'});
 
     isLoggedIn(): Observable<any> {
-        return this.http.post(`/checkLogin`, {})
+        return this.http.post(`/check-login`, {})
             .map((r: Response) => r)
             .take(1)
             .catch(this.handleError);
@@ -53,68 +53,4 @@ export class AuthService {
         return Observable.throw(errMsg);
 
     }
-
-
-    /**
-     * @method forgotPassword
-     * @description function to manage the forgot password
-     * @param email
-     * @returns {any}
-     * @tickets
-     */
-    forgotPassword(email: String) {
-        return this.dataService.callAPI({
-            url: 'recover-password',
-            body: {email: email},
-            method: 'post',
-            showErrorMessage: false,
-        })
-    }
-
-    /**
-     * @method validateToken
-     * @description function to validate the token
-     * @param token
-     * @returns {any}
-     */
-    validateToken(token: String) {
-        return this.dataService.callAPI({
-            url: '/validate-reset-password-token/' + token,
-            method: 'get',
-            errorMessage: 'Invalid or expired reset password token.'
-        });
-    }
-
-    /**
-     * @method resetForgotPasssword
-     * @description function to reset password
-     * @param body
-     * @returns {any}
-     */
-    resetForgotPasssword(body) {
-        return this.dataService.callAPI({
-            url: '/reset-forgot-password',
-            method: 'put',
-            body: body,
-            successMessage: 'New password set successfully.',
-            errorMessage: 'Error in setting new password.'
-        });
-    }
-
-    /**
-     * @method changePassword
-     * @description function to change password
-     * @param body
-     * @returns {any}
-     */
-    changePassword(body) {
-        return this.dataService.callAPI({
-            url: '/change-password',
-            method: 'put',
-            body: body,
-            successMessage: 'Password change successfully.',
-            errorMessage: 'Error in changing password.'
-        });
-    }
-
 }

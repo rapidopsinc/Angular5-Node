@@ -13,7 +13,7 @@ const fs = require('fs');
 require('./config/mongo');
 require('./config/express')(app);
 
-require('./root-user');
+// require('./root-user');
 
 
 app.use(express.static(path.join(__dirname, '../dist')));

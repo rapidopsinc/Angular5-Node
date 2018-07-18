@@ -18,12 +18,10 @@ export class AddUserComponent {
   }
 
   userdata: User = new User('', '', '', true);
-  listOfRoles: any;
 
 
   ngOnInit() {
-    this.listOfRoles = this.route.snapshot.data.listOfRoles.data;
-    this.userdata.Role = this.listOfRoles[0]._id;
+
   }
 
   AddUser(userForm) {

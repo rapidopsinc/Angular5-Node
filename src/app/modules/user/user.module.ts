@@ -34,41 +34,12 @@ let routes = [
     path: 'delete/:id',
     component: UserEditComponent
   },
-
-
-  // {path:'', component: UserListComponent,
-  //     data: {accessToken: 'USER_CANVIEW'},
-  //     canActivate: [CheckAuth]
-  // },
-  // {path: 'add', component: AddUserComponent,
-  //     resolve: {
-  //         listOfRoles: GetRolesListResolve
-  //     },
-  //     data: {accessToken: 'USER_CANADD'},
-  //     canActivate: [CheckAuth]
-  // },
-  // {path: 'edit/:id', component: UserEditComponent,
-  //     resolve: {
-  //         anyuser: GetUserResolve,
-  //         listOfRoles: GetRolesListResolve
-  //     },
-  //     data: {accessToken: 'USER_CANEDIT'},
-  //     canActivate: [CheckAuth]
-  // },
-  // {path: 'delete/:id', component: UserEditComponent,
-  //     data: {accessToken: 'USER_CANDELETE'
-  //     },
-  //     canActivate: [CheckAuth]},
-  // {path: 'list', component: UserListComponent,
-  //     data: {accessToken: 'USER_CANVIEW'},
-  //     canActivate: [CheckAuth]
-  // }
 ];
 
 
 @NgModule({
-  declarations: [AddUserComponent, UserEditComponent, UserListComponent,...SharedModule.COMPONENTS,...SharedModule.AG_GRID_COMPONENTS],
-  imports: [RouterModule.forChild(routes), FormsModule, CommonModule,AgGridModule.withComponents([...SharedModule.AG_GRID_COMPONENTS])],
+  declarations: [AddUserComponent, UserEditComponent, UserListComponent],
+  imports: [RouterModule.forChild(routes), FormsModule, CommonModule],
   exports: [AddUserComponent, UserEditComponent, UserListComponent],
   providers: [UserService, GetUserResolve,...SharedModule.PROVIDERS/*,GetRolesListResolve, CheckAuth*/]
 })

@@ -3,7 +3,7 @@ let MailOptions = require("../../utils/send-mail");
 module.exports = class AuthController {
     constructor(app) {
         app.get('/logout', this.doLogout);
-        app.post('/checkLogin', this.checkLogin);
+        app.post('/check-login', this.checkLogin);
         app.post('/login', this.doLogin);
         app.post('/root', this.createRootuser);
         app.post('/recover-password', this.recoverPassword);
@@ -182,7 +182,7 @@ module.exports = class AuthController {
             res.sendError(new Exception('ObjectNotFound'));
         })
     }
-    
+
     /**
      * @method changePassword
      * @description Method to change user's password

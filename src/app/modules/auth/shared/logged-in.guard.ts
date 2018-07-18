@@ -12,7 +12,7 @@ export class LoggedInGuard implements CanActivate {
     canActivate() {
         return this.authService.isLoggedIn()
             .map((r: Response) => {
-                this.result = r.json();
+                this.result = r;
                 if (this.result.status === "success") {
                     localStorage.setItem('currentUser', JSON.stringify(this.result.data[0]));
                     return true;

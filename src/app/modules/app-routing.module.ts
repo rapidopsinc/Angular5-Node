@@ -41,12 +41,6 @@ let routes: Routes = [
     canActivate: [LoggedInGuard]
   },
   {
-    path: 'profile',
-    component: RootComponent,
-    children: [...AuthModule.ROUTES],
-    canActivate: [LoggedInGuard]
-  },
-  {
     path: 'user',
     component: RootComponent,
     children: [...UserModule.ROUTES],
